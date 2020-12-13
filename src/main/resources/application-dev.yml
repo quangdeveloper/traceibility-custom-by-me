@@ -1,0 +1,69 @@
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tracebility?useSSL=false&serverTimezone=GMT%2B7&useLegacyDatetimeCode=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: quang1998
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 20MB
+      max-file-size: 10MB
+  logging:
+    level:
+    org:
+    springframework:
+    web:
+    filter:
+    CommonsRequestLoggingFilter: DEBUG
+
+config:
+  mail:
+    username: muadongquehuongtoi@gmail.com
+    password: fqfwqlpvlevjqazs
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail :
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        amount: 10
+app:
+  firebaseConfig:
+    ConfigurationFile: sinhvien-489ce-firebase-adminsdk-yj59w-37fb5ebb1b.json
+  jwt:
+    secret: KYIVtA7915PUEWTqTca74sENpw48u7nkzSJiJmitF7D2PJWOuKYIVtA7915PUEWTqTca74sENpw48u7nkzSJiJmitF7D2PJWOuKYIVtA7915PUEWTqTca74sENpw48u7nkzSJiJmitF7D2PJWOu
+    expriedTime: 2592000000
+    expriedTimeRefresh: 15552000000
+  avatar: avatar
+  smsConfig:
+    accountSID: AC3ff433f64f5e6ca34b49f0eb572c9637
+    authenToken: 4bf5ee81e10bfccf63015a214f9e1f26
+    phone: 12056913484
+    areaId: (205) 691-3484
+  redisConfig:
+    host: localhost
+    port: 6379
+  default:
+    password: 123456
+    directory:
+      emailAttackment:  C:\\Sources\\AttackmentMail\\
+      avatar:  C:\\Sources\\Avatar\\
+    timeContain: 180
+

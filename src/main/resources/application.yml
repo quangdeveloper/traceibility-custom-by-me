@@ -1,0 +1,17 @@
+
+spring:
+  profiles:
+    active: dev
+#  jmx:
+#    default-domain: nsi
+server:
+  servlet:
+    context-path: /tracebility
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          filter:
+            CommonsRequestLoggingFilter: DEBUG
